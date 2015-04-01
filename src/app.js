@@ -24,6 +24,7 @@ function setupClick() {
     sound.play(audio_files[idx], 0);
     randomColor.start();
     setTimeout(randomColor.stop, 1000);
+    ga('send', 'event', 'interaction', 'click', 'face');
   });
 
 }

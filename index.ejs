@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <%- include _templates/meta_facebook.ejs %>
+  <%- include _templates/meta_social.ejs %>
   <meta name="viewport" content="width=device-width, initial-scale=0.65">
-  <title>inside-the-venue</title>
+  <title>Inside the Venue</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="img/turbo_city.png">
 </head>
@@ -23,6 +23,16 @@
 
 
 <script id="live-reload" src="http://localhost:35729/livereload.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10091458-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <script src="app.js"></script>
 </body>
 </html>
