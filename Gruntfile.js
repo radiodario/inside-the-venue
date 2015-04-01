@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
     copy: {
       all: {
-        src: ['*.css', '*.html', 'audio/**/*', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
+        src: ['*.css', 'CNAME', '*.html', 'audio/**/*', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
         dest: 'dist/',
       },
     },
@@ -41,6 +41,8 @@ module.exports = function(grunt) {
 
     connect: {
       options: {
+        hostname: "0.0.0.0",
+        host: "0.0.0.0",
         port: process.env.PORT || 3131,
         base: 'dist/',
       },
