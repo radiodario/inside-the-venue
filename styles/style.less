@@ -42,7 +42,7 @@ a#turbo {
   background-image: url(img/face_dist.jpg);
 
   &.clicked {
-    background-image: url(img/face_big.png);
+    .bigFace;
     width: 750px;
     height: 800px;
     -webkit-animation-name: shake;
@@ -52,6 +52,15 @@ a#turbo {
     -webkit-animation-timing-function: linear;
   }
 
+}
+
+.bigFace {
+  background-image: url(img/face_big.png);
+}
+
+
+body:after{
+  .bigFace
 }
 
 @-webkit-keyframes shake {
