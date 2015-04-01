@@ -2,8 +2,8 @@
 var audio_dir = '/audio/'
 
 var audio_files = [
-  '/audio/GVL2_InsideTheVenue.mp3',
-  '/audio/GVL2_YouKnowWhatToDo.mp3'
+  'audio/GVL2_InsideTheVenue.mp3',
+  'audio/GVL2_YouKnowWhatToDo.mp3'
 ];
 
 
