@@ -8,6 +8,7 @@ var audio_files = [
 
 
 var soundEngine = require('./soundEngine.js');
+var randomColor = require('./randomColor.js')
 
 
 var sound = soundEngine();
@@ -23,12 +24,42 @@ pic.addEventListener('click', function() {
   var idx = (Math.random() * audio_files.length) | 0
   console.log("playing", idx, audio_files[idx]);
   sound.play(audio_files[idx], 0);
+  randomColor.start();
+  setTimeout(randomColor.stop, 1000);
 });
 
 
 
 
-},{"./soundEngine.js":2}],2:[function(require,module,exports){
+},{"./randomColor.js":2,"./soundEngine.js":3}],2:[function(require,module,exports){
+function getRandomColor() {
+    var hsl = Math.random() * 360 | 0;
+    return 'hsl('+hsl+',100%,50%)';
+}
+
+var requestId = 0;
+var running = false;
+
+function render() {
+  running = true;
+  document.body.style.backgroundColor = getRandomColor();
+
+  requestId = requestAnimationFrame(render);
+
+}
+
+
+module.exports = {
+  start: function start() {
+    if (!running)
+      render();
+  },
+  stop: function stop() {
+    cancelAnimationFrame(requestId);
+    running = false;
+  }
+};
+},{}],3:[function(require,module,exports){
 
 var Sound = function(player) {
   return {
@@ -246,4 +277,4 @@ module.exports = function () {
 
 
 }
-},{}]},{},[1,2])
+},{}]},{},[1,2,3])
