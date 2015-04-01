@@ -1,13 +1,13 @@
 {
-  "name": "inside-the-venue",
+  "name": "insidethevenue",
   "version": "0.0.0",
   "description": "My awesome site.",
   "scripts": {
     "start": "grunt server",
     "ghpages": "grunt ghpages"
   },
-  "homepage": "http://github.com/radiodario/inside-the-venue",
-  "bugs": "http://github.com/radiodario/inside-the-venue/issues",
+  "homepage": "http://github.com/radiodario/insidethevenue",
+  "bugs": "http://github.com/radiodario/insidethevenue/issues",
   "author": {
     "name": "Dario",
     "email": "dario@alolo.co",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/radiodario/inside-the-venue.git"
+    "url": "git://github.com/radiodario/insidethevenue.git"
   },
   "dependencies": {
 
