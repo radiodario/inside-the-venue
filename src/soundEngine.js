@@ -44,7 +44,7 @@ module.exports = function () {
     setup: function(sounds) {
 
       try {
-        this._context = new webkitAudioContext();
+        this._context = new AudioContext();
       }
       catch(e) {
         alert('Web Audio API is not supported in this browser');
