@@ -13,16 +13,15 @@ var randomColor = require('./randomColor.js')
 
 var sound = soundEngine();
 
-
 sound.setup(audio_files);
 
 
 
-var pic = document.querySelector('img');
+
+var pic = document.querySelector('#image');
 
 pic.addEventListener('click', function() {
   var idx = (Math.random() * audio_files.length) | 0
-  console.log("playing", idx, audio_files[idx]);
   sound.play(audio_files[idx], 0);
   randomColor.start();
   setTimeout(randomColor.stop, 1000);
@@ -49,13 +48,17 @@ function render() {
 }
 
 
+
 module.exports = {
   start: function start() {
-    if (!running)
+    if (!running) {
       render();
+      document.querySelector('#image').classList.add('clicked');
+    }
   },
   stop: function stop() {
     cancelAnimationFrame(requestId);
+    document.querySelector('#image').classList.remove('clicked');
     running = false;
   }
 };
