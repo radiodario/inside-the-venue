@@ -9,6 +9,11 @@ a#turbo {
 a#turbo:hover {
   box-shadow: 0px 0px 15px pink;
 }
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
 .cont {
   position: fixed;
   top: 0;
@@ -62,7 +67,8 @@ a#turbo:hover {
   z-index: 3;
 }
 body:after {
-  background-image: url(img/face_big.png);
+  display: none;
+  content: url(img/face_big.png);
 }
 @-webkit-keyframes shake {
   0% {
