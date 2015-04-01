@@ -131,7 +131,14 @@ module.exports = function () {
     setup: function(sounds) {
 
       try {
-        this._context = new AudioContext();
+        if ('AudioContext' in window) {
+          this._context = new AudioContext();
+          this.IS_SAFARI = false;
+        } else {
+          this.IS_SAFARI = true;
+          this._context = new webkitAudioContext();
+        }
+
       }
       catch(e) {
         alert('Web Audio API is not supported in this browser');
@@ -252,8 +259,10 @@ module.exports = function () {
         // recursively call playMusic
         that.playMusic(tracks)
       }
-
-      this._musicNode.start();
+      if (this.IS_SAFARI)
+        this._musicNode.noteOn(0);
+      else
+        this._musicNode.start();
 
 
 
@@ -284,7 +293,10 @@ module.exports = function () {
       // currentClip.gain.value = volume;
       currentClip.connect(this._mainNode);
       currentClip.loop = looping;
-      currentClip.start();              // play the source now
+      if (this.IS_SAFARI)
+        currentClip.noteOn(0);              // play the source now
+      else
+        currentClip.start();
       return true;
     },
 
