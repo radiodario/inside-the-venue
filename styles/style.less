@@ -32,13 +32,21 @@ html,body {
   bottom: 0;
   z-index:0;
 
+  &:hover {
+    border : 2px solid pink;
+  }
+
   cursor: hand;
   cursor: pointer;
 
   margin: auto;
 
-  width: 600px;
+  width: 590px;
   height: 730px;
+
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 1), inset -2px -2px 5px rgba(0, 0, 0, 1);
+
+
 
   background-position: center;
   background-repeat: no-repeat;
@@ -58,6 +66,7 @@ html,body {
     -webkit-transform-origin:50% 50%;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1), inset 2px 2px 5px rgba(0, 0, 0, 1);
   }
 
 }
