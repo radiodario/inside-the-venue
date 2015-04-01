@@ -7,6 +7,7 @@ var audio_files = [
 
 
 var soundEngine = require('./soundEngine.js');
+var randomColor = require('./randomColor.js')
 
 
 var sound = soundEngine();
@@ -22,6 +23,8 @@ pic.addEventListener('click', function() {
   var idx = (Math.random() * audio_files.length) | 0
   console.log("playing", idx, audio_files[idx]);
   sound.play(audio_files[idx], 0);
+  randomColor.start();
+  setTimeout(randomColor.stop, 1000);
 });
 
 
