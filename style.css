@@ -31,11 +31,15 @@ body {
   cursor: hand;
   cursor: pointer;
   margin: auto;
-  width: 600px;
+  width: 590px;
   height: 730px;
+  box-shadow: inset 2px 2px 5px #ffffff, inset -2px -2px 5px #000000;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(img/face_dist.jpg);
+}
+#image:hover {
+  border: 2px solid pink;
 }
 #image.loading {
   background-image: url(img/loading.gif);
@@ -49,6 +53,7 @@ body {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  box-shadow: inset -2px -2px 5px #ffffff, inset 2px 2px 5px #000000;
 }
 .bigFace {
   background-image: url(img/face_big.png);
