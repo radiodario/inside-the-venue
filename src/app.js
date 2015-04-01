@@ -9,7 +9,7 @@ var audio_files = [
 var durations = [
   1100,
   1100,
-  1600
+  1500
 ]
 
 
