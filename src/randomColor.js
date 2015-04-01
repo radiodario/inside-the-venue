@@ -15,13 +15,17 @@ function render() {
 }
 
 
+
 module.exports = {
   start: function start() {
-    if (!running)
+    if (!running) {
       render();
+      document.querySelector('#image').classList.add('clicked');
+    }
   },
   stop: function stop() {
     cancelAnimationFrame(requestId);
+    document.querySelector('#image').classList.remove('clicked');
     running = false;
   }
 };
