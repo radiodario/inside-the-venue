@@ -28,9 +28,12 @@ a#turbo:hover {
   margin: auto;
   width: 600px;
   height: 730px;
-  background-align: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-image: url(img/face_dist.jpg);
+}
+#image.loading {
+  background-image: url(img/loading.gif);
 }
 #image.clicked {
   background-image: url(img/face_big.png);
@@ -41,6 +44,12 @@ a#turbo:hover {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+}
+.bigFace {
+  background-image: url(img/face_big.png);
+}
+body:after {
+  background-image: url(img/face_big.png);
 }
 @-webkit-keyframes shake {
   0% {
