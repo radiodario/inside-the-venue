@@ -25,6 +25,7 @@ module.exports = {
   },
   stop: function stop() {
     cancelAnimationFrame(requestId);
+    document.body.style.backgroundColor = 'white';
     document.querySelector('#image').classList.remove('clicked');
     running = false;
   }
